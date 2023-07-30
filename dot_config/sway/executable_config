@@ -1,0 +1,6 @@
+# Definitions
+include ~/.config/sway/definitions.d/*.conf
+include /etc/sway/config.d/*
+
+# Custom
+include ~/.config/sway/config.d/*.conf

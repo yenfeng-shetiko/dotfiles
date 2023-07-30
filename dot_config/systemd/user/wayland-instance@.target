@@ -1,0 +1,4 @@
+[Unit]
+Description=Services which should run after the graphical session is brought up
+Requires=basic.target
+After=graphical-session.target

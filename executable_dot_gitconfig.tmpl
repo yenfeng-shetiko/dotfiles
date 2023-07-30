@@ -1,0 +1,41 @@
+[user]
+	email = {{ .email }}
+	name = {{ .chezmoi.username }}
+	signingkey = {{ .signingkey }}
+{{ if eq .chezmoi.os "android"  }}
+[gpg]
+    program = okc-gpg
+{{ end  }}
+[commit]
+	gpgsign = true
+[diff]
+	external = difft
+        tool = difftastic
+[diff "pandoc"]
+    textconv=pandoc --to=markdown
+    prompt = false
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
+[alias]
+    dft = difftool
+    wdiff = diff --word-diff=color --unified=1
+[core]
+	excludesfile = ~/.gitignore_global
+    autocrlf = input
+[init]
+	defaultBranch = master
+	templatedir = ~/.git_template
+[advice]
+	addIgnoredFile = false
+[push]
+	autoSetupRemote = true
+[credential "https://github.com"]
+	helper = 
+	helper = {{ .helper }}
+[credential "https://gist.github.com"]
+	helper = 
+	helper = {{ .helper }}
