@@ -1,0 +1,7 @@
+{{ if eq .chezmoi.os "windows" }}
+@echo off
+setx HOME %HOMEPATH%
+setx MSYS winsymlinks:nativestrict
+setx MSYS2_PATH_TYPE minimal
+exit /b 0
+{{ end }}

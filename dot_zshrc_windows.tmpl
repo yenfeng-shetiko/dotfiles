@@ -31,12 +31,13 @@ zinit light voronkovich/gitignore.plugin.zsh
 zinit light djui/alias-tips
 zinit light skywind3000/z.lua
 zinit light zimfw/git
+zinit ice pick".rc"
+zinit load $(cygpath -p {{ .chezmoi.sourceDir}})/git-subrepo
 
 # Snippet
 zinit snippet ~/.env.zsh
-zinit snippet ~/.bash_aliases
+zinit snippet https://gist.githubusercontent.com/hightemp/5071909/raw/
 zinit snippet ~/.local.windows.zsh
-zinit snippet {{ .chezmoi.sourceDir}}/git-subrepo/.rc
 # Load powerlevel10k theme
 zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
