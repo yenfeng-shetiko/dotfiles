@@ -72,8 +72,7 @@ export GPG_TTY=$TTY
 z4h source ~/.env.zsh
 {{ if eq .chezmoi.os "linux" }}
 z4h source ~/.local.linux.zsh
-{{ end }}
-{{ if eq .chezmoi.os "android" }}
+{{ else }}
 z4h source ~/.local.android.zsh
 z4h source $PREFIX/etc/profile
 {{ end }}
@@ -90,8 +89,8 @@ z4h load zimfw/git
 eval "$(thefuck --alias)"
 {{ if eq .chezmoi.os "linux" }}
 z4h source /usr/share/doc/find-the-command/ftc.zsh
-z4h source {{ .chezmoi.sourceDir }}/git-subrepo/.rc
 {{ end }}
+z4h source {{ .chezmoi.sourceDir }}/git-subrepo/.rc
 
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
