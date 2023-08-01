@@ -36,7 +36,7 @@ zinit load $(cygpath -p {{ .chezmoi.sourceDir}})/git-subrepo
 
 # Snippet
 zinit snippet ~/.env.zsh
-zinit snippet https://gist.githubusercontent.com/hightemp/5071909/raw/
+OS_WIN="yes" && zinit snippet https://gist.githubusercontent.com/hightemp/5071909/raw/
 zinit snippet ~/.local.windows.zsh
 # Load powerlevel10k theme
 zinit ice depth"1" # git clone depth
