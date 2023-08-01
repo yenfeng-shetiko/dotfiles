@@ -90,6 +90,7 @@ z4h load zimfw/git
 eval "$(thefuck --alias)"
 {{ if eq .chezmoi.os "linux" }}
 z4h source /usr/share/doc/find-the-command/ftc.zsh
+z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
 {{ end }}
 z4h source {{ .chezmoi.sourceDir }}/git-subrepo/.rc
 
