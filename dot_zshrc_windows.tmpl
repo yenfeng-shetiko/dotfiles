@@ -18,21 +18,40 @@ fi
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-# Plugin history-search-multi-word loaded with investigating.
-zinit load zdharma-continuum/history-search-multi-word
 
-# Two regular plugins loaded without investigating.
-zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting
+# (this is currently required for annexes)
+zinit light-mode depth"1" for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
 
-zinit light zsh-users/zsh-completions
-zinit light Aloxaf/fzf-tab
-zinit light voronkovich/gitignore.plugin.zsh
-zinit light djui/alias-tips
-zinit light skywind3000/z.lua
-zinit light zimfw/git
+### End of Zinit's installer chunk
+# Some Oh My Zsh Libs
+zinit for \
+      OMZL::history.zsh \
+      OMZL::key-bindings.zsh
+# Completion enhancements
+zinit wait lucid depth"1" for \
+      zdharma-continuum/fast-syntax-highlighting \
+      zsh-users/zsh-completions \
+      zsh-users/zsh-autosuggestions
+
+zinit wait lucid light-mode depth"1" for \
+      zsh-users/zsh-history-substring-search \
+      zsh-users/zsh-completions \
+      Aloxaf/fzf-tab \
+      voronkovich/gitignore.plugin.zsh \
+      djui/alias-tips \
+      skywind3000/z.lua \
+      zimfw/git \
+# Git Subrepo
 zinit ice pick".rc"
-zinit load $(cygpath -p {{ .chezmoi.sourceDir}})/git-subrepo
+zinit load $(cygpath -p {{ .chezmoi.sourceDir }})/git-subrepo
+# Git extras
+zinit ice wait lucid as"program" pick"$ZPFX/bin/git-*" src"etc/git-extras-completion.zsh" make"PREFIX=$ZPFX" if'(( $+commands[make] ))'
+zinit light tj/git-extras
+
 
 # Snippet
 zinit snippet ~/.env.zsh
