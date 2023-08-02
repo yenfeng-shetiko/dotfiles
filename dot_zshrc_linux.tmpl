@@ -70,7 +70,6 @@ export GPG_TTY=$TTY
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
-z4h source ~/.bash_aliases
 {{ if eq .chezmoi.os "linux" }}
 z4h source ~/.local.linux.zsh
 {{ else }}
