@@ -7,16 +7,13 @@ git-subrepo
 !.config/starship.toml
 !.config/davmail
 .local
-.local.linux.zsh
 .profile
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 .zshrc_windows
-.local.windows.zsh
 {{ else }}
 .zshrc_linux
 .zshenv
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
-.local.android.zsh
 {{ end }}
