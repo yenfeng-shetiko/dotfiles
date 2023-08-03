@@ -27,10 +27,17 @@ zinit light-mode depth"1" for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
-# Some Oh My Zsh Libs
+# Oh My Zsh
 zinit for \
       OMZL::history.zsh \
       OMZL::key-bindings.zsh
+
+zinit wait lucid for \
+      OMZP::cp \
+      OMZP::extract \
+      OMZP::fancy-ctrl-z \
+      OMZP::sudo \
+      OMZP::tmux
 # Completion enhancements
 zinit wait lucid depth"1" for \
       zdharma-continuum/fast-syntax-highlighting \
