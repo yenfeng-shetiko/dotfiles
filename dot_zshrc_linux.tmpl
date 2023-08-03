@@ -70,12 +70,7 @@ export GPG_TTY=$TTY
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
-{{ if eq .chezmoi.os "linux" }}
-z4h source ~/.local.linux.zsh
-{{ else }}
-z4h source ~/.local.android.zsh
-z4h source $PREFIX/etc/profile
-{{ end }}
+z4h source ~/.local.zsh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #

@@ -1,0 +1,30 @@
+{{ if eq .chezmoi.os "linux"}}
+alias lsa='exa -alF --icons'
+alias mv='advmv -g'
+alias cp='advcp -g'
+
+# pnpm
+export PNPM_HOME="{{ .chezmoi.homeDir }}/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+{{ end }}
+{{ if eq .chezmoi.os "windows"}}
+export PATH=$PATH:$HOME/scoop/apps/gsudo/current/
+alias lsa='ls -alF --color=auto'
+alias pacman='pacboy'
+alias sudo='gsudo'
+{{ end }}
+{{ if eq .chezmoi.os "android"}}
+alias rish='{{ .rish }}'
+alias lsa='exa -alF --icons'
+eval $(okc-ssh-agent)
+{{ end }}
+# Clipboard
+{{ if eq .chezmoi.os "linux"}}alias getcb='wl-paste'{{ end }}
+{{ if eq .chezmoi.os "windows"}}alias getcb='cat /dev/clipboard'{{ end }}
+{{ if eq .chezmoi.os "android"}}alias getcb='termux-clipboard-get'{{ end }}
+
+# Wget
+alias wgetncc='wget --no-check-certificate'
+alias wgetc='wget `getcb`'
+alias wgetaec='wgetae getcb'
