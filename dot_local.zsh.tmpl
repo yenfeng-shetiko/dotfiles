@@ -19,12 +19,3 @@ alias rish='{{ .rish }}'
 alias lsa='exa -alF --icons'
 eval $(okc-ssh-agent)
 {{ end }}
-# Clipboard
-{{ if eq .chezmoi.os "linux"}}alias getcb='wl-paste'{{ end }}
-{{ if eq .chezmoi.os "windows"}}alias getcb='cat /dev/clipboard'{{ end }}
-{{ if eq .chezmoi.os "android"}}alias getcb='termux-clipboard-get'{{ end }}
-
-# Wget
-alias wgetncc='wget --no-check-certificate'
-alias wgetc='wget `getcb`'
-alias wgetaec='wgetae getcb'

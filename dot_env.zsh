@@ -10,6 +10,9 @@ export BAT_THEME="TwoDark"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
+# Wget
+alias wgetncc='wget --no-check-certificate'
+alias wgetc='wget `clippaste`'
 function wget_archive_and_extract {
   URL=$1
   FILENAME=${URL##*/}
@@ -17,6 +20,7 @@ function wget_archive_and_extract {
   extract -r $FILENAME
 }
 alias wgetae='wget_archive_and_extract '
+alias wgetaec='wgetae clippaste'
 
 # Utils
 alias sitecopy='wget -k -K -E -r -l 10 -p -N -F -nH '
