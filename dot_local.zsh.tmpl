@@ -9,7 +9,6 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
-export PATH=$PATH:$HOME/scoop/apps/gsudo/current/
 alias lsa='ls -alF --color=auto'
 alias pacman='pacboy'
 alias sudo='gsudo'
