@@ -13,7 +13,6 @@ git-subrepo
 .zshrc_windows
 {{ else }}
 .zshrc_linux
-.ssh
 .zshenv
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
