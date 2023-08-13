@@ -11,6 +11,7 @@ git-subrepo
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 .zshrc_windows
+AppData
 {{ else }}
 .zshrc_linux
 .zshenv
