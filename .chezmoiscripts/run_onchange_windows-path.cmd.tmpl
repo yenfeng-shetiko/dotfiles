@@ -2,6 +2,7 @@
 @echo off
 setx HOME %USERPROFILE%
 setx MSYS winsymlinks:nativestrict
-setx MSYS2_PATH_TYPE minimal
+setx MSYS2_PATH_TYPE inherit
+setx EDITOR emacs
 exit /b 0
 {{ end }}
