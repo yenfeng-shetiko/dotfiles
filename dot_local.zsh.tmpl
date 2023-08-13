@@ -9,6 +9,7 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
+export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 alias lsa='ls -alF --color=auto'
 alias pacman='pacboy'
 alias sudo='gsudo'
@@ -16,5 +17,4 @@ alias sudo='gsudo'
 {{ if eq .chezmoi.os "android"}}
 alias rish='{{ .rish }}'
 alias lsa='exa -alF --icons'
-eval $(okc-ssh-agent)
 {{ end }}
