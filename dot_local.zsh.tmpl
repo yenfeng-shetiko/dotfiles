@@ -10,6 +10,7 @@ export PATH="$PNPM_HOME:$PATH"
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
+export PATH=$PATH:$HOME/scoop/apps/gsudo/current
 alias lsa='ls -alF --color=auto'
 alias pacman='pacboy'
 alias sudo='gsudo'
