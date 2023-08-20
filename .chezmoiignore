@@ -4,7 +4,6 @@ git-subrepo
 {{ if ne .chezmoi.os "linux" }}
 .config/*
 !.config/doom
-!.config/starship.toml
 !.config/davmail
 .local
 .profile
