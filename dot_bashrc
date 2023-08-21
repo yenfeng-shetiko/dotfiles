@@ -1,0 +1,4 @@
+eval "$(oh-my-posh init bash --config "$POSH_THEMES_PATH\uew.omp.json")"
+eval "$(thefuck --alias)"
+eval "$(chezmoi completion bash)"
+
