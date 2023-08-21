@@ -3,13 +3,13 @@ tmpl
 git-subrepo
 {{ if ne .chezmoi.os "linux" }}
 .config/*
-!.config/doom
 !.config/davmail
 .local
 .profile
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 .zshrc_windows
+.bashrc
 AppData
 {{ else }}
 .zshrc_linux
