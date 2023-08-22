@@ -1,5 +1,4 @@
 README.md
-tmpl
 git-subrepo
 {{ if ne .chezmoi.os "linux" }}
 .config/*
