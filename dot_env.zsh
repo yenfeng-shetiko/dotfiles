@@ -2,6 +2,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.nix-profile/bin
+export PATH=$PATH:$HOME/.config/emacs/bin
 alias em='emacs -nw'
 export GPG_TTY=$(tty)
 #bat https://github.com/sharkdp/bat
