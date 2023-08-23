@@ -3,6 +3,8 @@ git-subrepo
 {{ if ne .chezmoi.os "linux" }}
 .config/*
 !.config/davmail
+!.config/doom
+!.config/emacs-rime
 .local
 .profile
 {{ end }}
