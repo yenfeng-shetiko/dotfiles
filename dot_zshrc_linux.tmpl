@@ -74,7 +74,6 @@ z4h source ~/.local.zsh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #
-z4h load ohmyzsh/ohmyzsh/clipboard.zsh
 z4h load ohmyzsh/ohmyzsh/plugins/cp
 z4h load ohmyzsh/ohmyzsh/plugins/extract
 z4h load ohmyzsh/ohmyzsh/plugins/fancy-ctrl-z
@@ -83,6 +82,7 @@ z4h load voronkovich/gitignore.plugin.zsh
 z4h load djui/alias-tips
 z4h load skywind3000/z.lua
 z4h load zimfw/git
+z4h source ohmyzsh/ohmyzsh/lib/clipboard.zsh
 {{ if eq .chezmoi.os "linux" }}
 eval "$(thefuck --alias)"
 z4h source /usr/share/doc/find-the-command/ftc.zsh
