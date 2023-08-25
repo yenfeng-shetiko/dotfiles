@@ -3,7 +3,7 @@ Description=Rclone mount %I driectory
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/rclone mount OneDrive:/%I/  {{ .chezmoi.homeDir }}/%I --cache-dir {{ .chezmoi.homeDir }}/.cache/OneDrive --vfs-cache-mode writes
+ExecStart=/usr/bin/rclone mount dropbox:/%I/  {{ .chezmoi.homeDir }}/%I --cache-dir {{ .chezmoi.homeDir }}/.cache/rclone --vfs-cache-mode writes
 
 [Install]
 WantedBy=default.target
