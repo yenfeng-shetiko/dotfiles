@@ -62,7 +62,7 @@ disable = ["vim", "containers"]
 # Additional git repositories to pull
 repos = [
     "~/src/*/",
-#    "~/.config/something"
+    "~/.config/doom/modules/editor/meow"
 ]
 
 # Don't pull the predefined git repos
