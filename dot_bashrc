@@ -1,4 +1,4 @@
 eval "$(oh-my-posh init bash --config "$POSH_THEMES_PATH\powerlevel10k_lean.omp.json")"
 eval "$(thefuck --alias)"
 eval "$(chezmoi completion bash)"
-
+alias lsa="eza -alF --icons"
