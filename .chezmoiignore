@@ -16,5 +16,6 @@ AppData
 .zshrc_linux
 .zshenv
 {{ end }}
-{{ if ne .chezmoi.os "android" }}
+{{ if eq .chezmoi.os "android" }}
+!.config/topgrade.toml
 {{ end }}
