@@ -82,7 +82,7 @@ repos = [
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 #"Custom command using interactive shell (unix)" = "-i vim_upgrade"
-"Watchtower" = "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower -c  --run-once"
+{{ if ne .chezmoi.os "android" }}"Watchtower" = "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower -c  --run-once"{{ end }}
 
 [brew]
 #greedy_cask = true
