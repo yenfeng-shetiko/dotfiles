@@ -87,6 +87,7 @@ z4h source ohmyzsh/ohmyzsh/lib/clipboard.zsh
 eval "$(thefuck --alias)"
 z4h source /usr/share/doc/find-the-command/ftc.zsh
 z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
+test -d /data && z4h source ~/.renv.zsh
 {{ else }}
 z4h source $PREFIX/etc/profile
 {{ end }}
