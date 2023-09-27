@@ -12,6 +12,7 @@ export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 eval "$(chezmoi completion zsh)"
 alias pacman='pacboy'
 alias sudo='gsudo'
+alias ls='eza -A --icons'
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
 alias rish='{{ .rish }}'
