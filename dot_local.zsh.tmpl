@@ -10,12 +10,10 @@ export PATH="$PNPM_HOME:$PATH"
 {{ if eq .chezmoi.os "windows"}}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 eval "$(chezmoi completion zsh)"
-alias lsa='eza -alF --color=auto'
 alias pacman='pacboy'
 alias sudo='gsudo'
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
 alias rish='{{ .rish }}'
-alias lsa='eza -alF --icons'
 alias pacman=pacaptr
 {{ end }}
