@@ -4,6 +4,8 @@ export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.nix-profile/bin
 export PATH=$PATH:$HOME/.config/emacs/bin
 alias em='emacs -nw'
+alias ls='eza --icons'
+alias lsa='ls -alF'
 export GPG_TTY=$(tty)
 #bat https://github.com/sharkdp/bat
 export BAT_STYLE=plain
