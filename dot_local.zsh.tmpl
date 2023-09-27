@@ -6,6 +6,8 @@ alias cp='advcp -g'
 export PNPM_HOME="{{ .chezmoi.homeDir }}/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+{{ else }}
+alias pacman=pacaptr
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
