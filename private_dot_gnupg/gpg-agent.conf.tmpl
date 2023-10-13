@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "linux" }}
 pinentry-program /usr/bin/pinentry-gnome3
 {{ else if eq .chezmoi.os "windows" }}
-pinentry-program {{ .chezmoi.homeDir }}\scoop\apps\gpg4win\current\Gpg4win\bin\pinentry.exe
+pinentry-program C:\msys64\ucrt64\bin\pinentry.exe
 {{ else }}
 {{ end }}
