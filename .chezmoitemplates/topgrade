@@ -9,7 +9,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["vim", "containers", "pip3"]
+disable = {{ if eq .chezmoi.os "linux" }}["vim", "containers", "pip3"]{{ else }}["vim", "containers", "pip3", "system"]{{ end }}
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
