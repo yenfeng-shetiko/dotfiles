@@ -58,9 +58,6 @@ zinit light Aloxaf/fzf-tab
 # Git Subrepo
 zinit ice pick".rc"
 zinit load $(cygpath -p {{ .chezmoi.sourceDir }})/git-subrepo
-# Git extras
-zinit ice wait lucid as"program" pick"$ZPFX/bin/git-*" src"etc/git-extras-completion.zsh" make"PREFIX=$ZPFX" if'(( $+commands[make] ))'
-zinit light tj/git-extras
 
 
 source ~/.env.zsh
