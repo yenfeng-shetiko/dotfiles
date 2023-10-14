@@ -12,11 +12,16 @@ export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 #Java XWayland blank screens fix
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# Fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
+# Hardware video acceleration
+export LIBVA_DRIVER_NAME=iHD
+export VDPAU_DRIVER=va_gl
+# Default
 export TERMINAL=foot
 export EDITOR='emacs -nw'
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
