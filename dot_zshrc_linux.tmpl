@@ -91,7 +91,7 @@ test -d /data && z4h source ~/.renv.zsh
 {{ else }}
 z4h source $PREFIX/etc/profile
 {{ end }}
-z4h source {{ .chezmoi.sourceDir }}/git-subrepo/.rc
+z4h source ~/src/git-subrepo/.rc
 
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H

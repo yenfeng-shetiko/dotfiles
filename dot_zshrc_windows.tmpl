@@ -56,8 +56,7 @@ zinit wait lucid light-mode depth"1" for \
 zinit ice depth"1" atload"zicompinit; zicdreplay"
 zinit light Aloxaf/fzf-tab
 # Git Subrepo
-zinit ice pick".rc"
-zinit load $(cygpath -p {{ .chezmoi.sourceDir }})/git-subrepo
+source ~/src/git-subrepo/.rc
 
 
 source ~/.env.zsh
