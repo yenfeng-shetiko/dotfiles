@@ -115,6 +115,7 @@ repos = [
 #enable_pip_review_local = true                   ###disabled by default
 enable_pipupgrade = true                         ###disabled by default
 #pipupgrade_arguments = "-y -u --pip-path pip"    ###disabled by default
+pipupgrade_arguments = "--ignore msgpack"
 
 [windows]
 # Manually select Windows updates
