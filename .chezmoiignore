@@ -1,5 +1,4 @@
 README.md
-git-subrepo
 {{ if ne .chezmoi.os "linux" }}
 .config/*
 !.config/davmail
