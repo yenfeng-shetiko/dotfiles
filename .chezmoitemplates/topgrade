@@ -60,7 +60,7 @@ cleanup = {{ if eq .chezmoi.os "linux" }}false{{ else }}true{{ end }}
 [git]
 #max_concurrency = 5
 # Additional git repositories to pull
-repos = [
+pull_only_repos = [
     "~/src/*/",
     "~/.config/doom/modules/editor/meow"
 ]
