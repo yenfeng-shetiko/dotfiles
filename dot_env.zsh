@@ -10,7 +10,7 @@ export GPG_TTY=$(tty)
 #bat https://github.com/sharkdp/bat
 export BAT_STYLE=plain
 export BAT_THEME="TwoDark"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="zsh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
 # Wget
