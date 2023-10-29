@@ -42,7 +42,7 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
-eval "$(register-python-argcomplete --shell zsh pipx)"
+eval "$(register-python-argcomplete --shell bash pipx)"
 {{ if eq .chezmoi.os "linux"}}
 eval "$(thefuck --alias)"
 eval "$(docker completion zsh)"
