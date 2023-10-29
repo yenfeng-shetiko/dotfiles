@@ -70,7 +70,6 @@ export GPG_TTY=$TTY
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
-z4h source ~/.local.zsh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #
@@ -83,14 +82,6 @@ z4h load djui/alias-tips
 z4h load skywind3000/z.lua
 z4h load zimfw/git
 z4h source ohmyzsh/ohmyzsh/lib/clipboard.zsh
-{{ if eq .chezmoi.os "linux" }}
-eval "$(thefuck --alias)"
-z4h source /usr/share/doc/find-the-command/ftc.zsh
-z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
-test -d /data && z4h source ~/.renv.zsh
-{{ else }}
-z4h source $PREFIX/etc/profile
-{{ end }}
 z4h source ~/src/git-subrepo/.rc
 
 # Define key bindings.

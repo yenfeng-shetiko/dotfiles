@@ -42,3 +42,28 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
+eval "$(docker completion zsh)"
+{{ if eq .chezmoi.os "linux"}}
+eval "$(thefuck --alias)"
+z4h source /usr/share/doc/find-the-command/ftc.zsh
+z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
+test -d /data && z4h source ~/.renv.zsh
+alias mv='advmv -g'
+alias cp='advcp -g'
+
+# pnpm
+export PNPM_HOME="{{ .chezmoi.homeDir }}/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+{{ end }}
+{{ if eq .chezmoi.os "windows"}}
+export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
+eval "$(chezmoi completion zsh)"
+alias pacman='pacboy'
+alias sudo='gsudo'
+alias ls='eza -A --icons'
+{{ end }}
+{{ if eq .chezmoi.os "android"}}
+z4h source $PREFIX/etc/profile
+alias rish='{{ .rish }}'
+{{ end }}
