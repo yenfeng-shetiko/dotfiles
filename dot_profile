@@ -25,3 +25,4 @@ export VDPAU_DRIVER=va_gl
 export TERMINAL=foot
 export EDITOR='emacs -nw'
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export DOCKER_CONTEXT=colima
