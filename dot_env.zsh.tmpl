@@ -45,6 +45,7 @@ rga-fzf() {
 {{ if eq .chezmoi.os "linux"}}
 eval "$(thefuck --alias)"
 eval "$(docker completion zsh)"
+eval "$(colima completion zsh)"
 z4h source /usr/share/doc/find-the-command/ftc.zsh
 z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
 test -d /data && z4h source ~/.renv.zsh
