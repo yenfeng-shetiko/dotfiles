@@ -42,8 +42,8 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
-eval "$(register-python-argcomplete --shell bash pipx)"
 {{ if eq .chezmoi.os "linux"}}
+eval "$(register-python-argcomplete --shell bash pipx)"
 eval "$(thefuck --alias)"
 eval "$(docker completion zsh)"
 eval "$(colima completion zsh)"
@@ -61,11 +61,11 @@ export PATH="$PNPM_HOME:$PATH"
 {{ if eq .chezmoi.os "windows"}}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 eval "$(oh-my-posh init bash --config "$POSH_THEMES_PATH\powerlevel10k_rainbow.omp.json")"
-eval "$(thefuck --alias)"
 eval "$(chezmoi completion bash)"
 eval "$(docker completion bash)"
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
+eval "$(register-python-argcomplete --shell bash pipx)"
 z4h source $PREFIX/etc/profile
 alias rish='{{ .rish }}'
 {{ end }}
