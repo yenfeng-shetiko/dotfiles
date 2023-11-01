@@ -6,14 +6,11 @@ README.md
 !.config/emacs-rime
 .local
 .profile
+.gnupg
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
-.zshrc_windows
 .bashrc
 AppData
-{{ else }}
-.zshrc_linux
-.zshenv
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
 .termux

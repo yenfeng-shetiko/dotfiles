@@ -62,9 +62,6 @@ export PATH="$PNPM_HOME:$PATH"
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 eval "$(chezmoi completion zsh)"
 eval "$(docker completion zsh)"
-alias pacman='pacboy'
-alias sudo='gsudo'
-alias ls='eza -A --icons'
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
 z4h source $PREFIX/etc/profile
