@@ -60,6 +60,7 @@ export PATH="$PNPM_HOME:$PATH"
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
+eval "$(oh-my-posh init bash --config "$POSH_THEMES_PATH\powerlevel10k_rainbow.omp.json")"
 eval "$(thefuck --alias)"
 eval "$(chezmoi completion bash)"
 eval "$(docker completion bash)"
