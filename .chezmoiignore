@@ -9,7 +9,6 @@ README.md
 .gnupg
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
-.bashrc
 AppData
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
