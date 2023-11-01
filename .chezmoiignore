@@ -10,6 +10,9 @@ README.md
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 AppData
+{{ else }}
+.zshrc
+.zshenv
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
 .termux
