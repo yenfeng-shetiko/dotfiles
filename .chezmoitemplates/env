@@ -60,6 +60,7 @@ export PATH="$PNPM_HOME:$PATH"
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
+source ~/src/git-subrepo/.rc
 eval "$(oh-my-posh init bash --config "$POSH_THEMES_PATH\powerlevel10k_rainbow.omp.json")"
 eval "$(lua ~/scoop/apps/z.lua/current/z.lua --init bash)"
 eval "$(chezmoi completion bash)"
