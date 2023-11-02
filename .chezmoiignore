@@ -7,6 +7,7 @@ README.md
 .local
 .profile
 .gnupg
+.renv.zsh
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 .bashrc
@@ -14,10 +15,11 @@ AppData
 {{ else }}
 .zshrc
 .zshenv
+.env.zsh
+.p10k.zsh
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
 .termux
-{{ end }}
-{{ if eq .chezmoi.os "android" }}
+{{ else }}
 !.config/topgrade.toml
 {{ end }}
