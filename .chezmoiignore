@@ -2,7 +2,6 @@ README.md
 {{ if ne .chezmoi.os "linux" }}
 .config/*
 !.config/davmail
-!.config/emacs-rime
 .local
 .profile
 .gnupg
