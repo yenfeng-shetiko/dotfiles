@@ -64,5 +64,5 @@ source ~/src/git-subrepo/.rc
 {{ if eq .chezmoi.os "android"}}
 eval "$(register-python-argcomplete --shell bash pipx)"
 z4h source $PREFIX/etc/profile
-alias rish='{{ .rish }}'
+alias rish="~/rish"
 {{ end }}
