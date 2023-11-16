@@ -48,7 +48,6 @@ eval "$(docker completion zsh)"
 eval "$(colima completion zsh)"
 z4h source /usr/share/doc/find-the-command/ftc.zsh
 z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
-test -d /data && z4h source ~/.renv.zsh
 alias mv='advmv -g'
 alias cp='advcp -g'
 

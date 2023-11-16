@@ -5,7 +5,6 @@ README.md
 .local
 .profile
 .gnupg
-.renv.zsh
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
 .bashrc
