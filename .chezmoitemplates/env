@@ -43,6 +43,7 @@ rga-fzf() {
 }
 {{ if eq .chezmoi.os "linux"}}
 eval "$(register-python-argcomplete --shell bash pipx)"
+eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 eval "$(docker completion zsh)"
 eval "$(colima completion zsh)"
@@ -62,6 +63,7 @@ source ~/src/git-subrepo/.rc
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
 eval "$(register-python-argcomplete --shell bash pipx)"
+eval "$(zoxide init zsh)"
 z4h source $PREFIX/etc/profile
 alias rish="~/rish"
 {{ end }}
