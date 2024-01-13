@@ -31,7 +31,7 @@ disable = ["emacs", {{ if eq .chezmoi.os "windows" }}"vim", "containers", "pip3"
 #run_in_tmux = true
 
 # List of remote machines with Topgrade installed on them
-#remote_topgrades = ["toothless", "pi", "parnas"]
+{{ if ne .chezmoi.os "android" }}remote_topgrades = ["web-sever"]{{ end }}
 
 # Arguments to pass SSH when upgrading remote systems
 #ssh_arguments = "-o ConnectTimeout=2"
