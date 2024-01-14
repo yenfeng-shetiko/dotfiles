@@ -51,9 +51,7 @@ zstyle ':z4h:ssh:*' send-extra-files '~/.nanorc' '~/.env.zsh'
 # up-to-date. Cloned files can be used after `z4h init`. This is just an
 # example. If you don't plan to use Oh My Zsh, delete this line.
 z4h install ohmyzsh/ohmyzsh || return
-z4h install voronkovich/gitignore.plugin.zsh || return
 z4h install djui/alias-tips || return
-z4h install skywind3000/z.lua || return
 z4h install zimfw/git || return
 
 # Install or update core components (fzf, zsh-autosuggestions, etc.) and
@@ -77,9 +75,9 @@ z4h load ohmyzsh/ohmyzsh/plugins/cp
 z4h load ohmyzsh/ohmyzsh/plugins/extract
 z4h load ohmyzsh/ohmyzsh/plugins/fancy-ctrl-z
 z4h load ohmyzsh/ohmyzsh/plugins/sudo
+z4h load ohmyzsh/ohmyzsh/plugins/gitignore
 z4h load djui/alias-tips
 z4h load zimfw/git
-z4h source voronkovich/gitignore.plugin.zsh/gitignore.plugin.zsh
 z4h source ~/src/git-subrepo/.rc
 
 # Define key bindings.
