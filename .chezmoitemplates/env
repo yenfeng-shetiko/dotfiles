@@ -47,7 +47,6 @@ eval "$(register-python-argcomplete --shell bash pipx)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 eval "$(docker completion zsh)"
-eval "$(colima completion zsh)"
 z4h source /usr/share/doc/find-the-command/ftc.zsh
 z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
 alias mv='advmv -g'
