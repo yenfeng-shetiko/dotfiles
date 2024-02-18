@@ -42,7 +42,7 @@ rga-fzf() {
 	xdg-open "$file"
 }
 {{ if eq .chezmoi.os "linux"}}
-gxport PATH=$PATH:$HOME/.rd/bin
+export PATH=$PATH:$HOME/.rd/bin
 eval "$(register-python-argcomplete --shell bash pipx)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
