@@ -83,6 +83,7 @@ repos = [
 #"Custom command using interactive shell (unix)" = "-i vim_upgrade"
 "Update GEO" = "curl -H 'Authorization: Bearer {{ .yacd }}' 'http://localhost:9090/configs/geo' -X POST"
 {{ if ne .chezmoi.os "android" }}"Watchtower" = "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower -c  --run-once"{{ end }}
+{{ if eq .chezmoi.os "windows" }}"Borgmatic" = "docker exec borgmatic borgmatic --verbosity 1 --list --stats"{{ end }}
 
 [brew]
 #greedy_cask = true
