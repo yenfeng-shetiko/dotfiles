@@ -57,6 +57,7 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
+alias pacman=pacboy
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 source ~/src/git-subrepo/.rc
 {{ end }}
