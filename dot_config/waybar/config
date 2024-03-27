@@ -35,11 +35,11 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "on-click": "swaymsg exec \\$once \\$term_float btm"
+        "on-click": "swaymsg exec \\$term_float btm"
     },
     "memory": {
         "format": "{}% ",
-        "on-click": "swaymsg exec \\$once \\$term_float btm"
+        "on-click": "swaymsg exec \\$term_float btm"
     },
     "backlight": {
         // "device": "acpi_video1",
