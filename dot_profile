@@ -21,8 +21,6 @@ export GLFW_IM_MODULE=ibus
 # Hardware video acceleration
 export LIBVA_DRIVER_NAME=nvidia
 export VDPAU_DRIVER=nvidia
-# Rancher Desktop
-export PATH=$PATH:$HOME/.rd/bin
 # Default
 export TERMINAL=foot
 export EDITOR='emacs -nw'
