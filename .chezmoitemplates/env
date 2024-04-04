@@ -58,6 +58,7 @@ export PATH="$PNPM_HOME:$PATH"
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
 eval "$($HOME/scoop/shims/zoxide init bash)"
+eval "$($HOME/scoop/shims/chezmoi completion bash)"
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 source ~/src/git-subrepo/.rc
 alias pacman=pacboy
