@@ -43,11 +43,6 @@ rga-fzf() {
 {{ if eq .chezmoi.os "linux"}}
 export PATH=$PATH:$HOME/.rd/bin
 eval "$(register-python-argcomplete --shell bash pipx)"
-eval "$(zoxide init zsh)"
-eval "$(thefuck --alias)"
-eval "$(docker completion zsh)"
-z4h source /usr/share/doc/find-the-command/ftc.zsh
-z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
 alias mv='advmv -g'
 alias cp='advcp -g'
 
@@ -66,7 +61,5 @@ alias pacman=pacboy
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
 eval "$(register-python-argcomplete --shell bash pipx)"
-eval "$(zoxide init zsh)"
-z4h source $PREFIX/etc/profile
 alias rish="~/rish"
 {{ end }}

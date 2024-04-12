@@ -75,9 +75,19 @@ z4h load ohmyzsh/ohmyzsh/plugins/cp
 z4h load ohmyzsh/ohmyzsh/plugins/extract
 z4h load ohmyzsh/ohmyzsh/plugins/fancy-ctrl-z
 z4h load ohmyzsh/ohmyzsh/plugins/gitignore
+z4h load ohmyzsh/ohmyzsh/plugins/zoxide
 z4h load djui/alias-tips
 z4h load zimfw/git
 z4h source ~/src/git-subrepo/.rc
+{{ if eq .chezmoi.os "linux"}}
+z4h load ohmyzsh/ohmyzsh/plugins/docker
+z4h load ohmyzsh/ohmyzsh/plugins/thefuck
+z4h source /usr/share/doc/find-the-command/ftc.zsh
+z4h source /usr/share/doc/git-extras/git-extras-completion.zsh
+{{ end }}
+{{ if eq .chezmoi.os "android"}}
+z4h source $PREFIX/etc/profile
+{{ end }}
 
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
