@@ -53,7 +53,7 @@ export PATH="$PNPM_HOME:$PATH"
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
 source "$HOME/scoop/apps/zoxide/current/completions/zoxide.bash"
-source "$HOMEC/scoop/apps/chezmoi/current/completions/chezmoi-completion.bash"
+source "$HOME/scoop/apps/chezmoi/current/completions/chezmoi-completion.bash"
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 export EDITOR='emacs -nw'
 source ~/src/git-subrepo/.rc
