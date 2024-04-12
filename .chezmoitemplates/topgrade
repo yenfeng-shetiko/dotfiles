@@ -55,7 +55,7 @@ cleanup = {{ if eq .chezmoi.os "linux" }}false{{ else }}true{{ end }}
 #skip_notify = true
 
 # Whether to self update (this is ignored if the binary has been built without self update support, available also via setting the environment variable TOPGRADE_NO_SELF_UPGRADE)
-#no_self_update = true
+no_self_update = true
 
 [git]
 #max_concurrency = 5
@@ -71,7 +71,7 @@ repos = [
 #arguments = "--rebase --autostash"
 
 [composer]
-#self_update = false
+#self_update = true
 
 # Commands to run before anything
 [pre_commands]
