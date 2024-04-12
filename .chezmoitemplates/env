@@ -42,7 +42,7 @@ rga-fzf() {
 }
 {{ if eq .chezmoi.os "linux"}}
 export PATH=$PATH:$HOME/.rd/bin
-eval "$(register-python-argcomplete --shell bash pipx)"
+eval "$(register-python-argcomplete --shell zsh pipx)"
 alias mv='advmv -g'
 alias cp='advcp -g'
 
@@ -60,6 +60,6 @@ source ~/src/git-subrepo/.rc
 alias pacman=pacboy
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
-eval "$(register-python-argcomplete --shell bash pipx)"
+eval "$(register-python-argcomplete --shell zsh pipx)"
 alias rish="~/rish"
 {{ end }}
