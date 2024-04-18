@@ -45,11 +45,6 @@ export PATH=$PATH:$HOME/.rd/bin
 eval "$(register-python-argcomplete --shell zsh pipx)"
 alias mv='advmv -g'
 alias cp='advcp -g'
-
-# pnpm
-export PNPM_HOME="{{ .chezmoi.homeDir }}/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
 source "$HOME/scoop/apps/zoxide/current/completions/zoxide.bash"
