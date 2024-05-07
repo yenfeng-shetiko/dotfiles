@@ -36,6 +36,13 @@ bindkey -e
 
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
+# Set ZSH
+[[ -z "$ZSH" ]] && export ZSH="${${(%):-%x}:a:h}"
+
+# Set ZSH_CACHE_DIR
+if [[ -z "$ZSH_CACHE_DIR" ]]; then
+  ZSH_CACHE_DIR="$ZSH/cache"
+fi
 
 # -----------------
 # Zim configuration

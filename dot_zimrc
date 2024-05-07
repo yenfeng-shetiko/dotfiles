@@ -40,6 +40,11 @@ zmodule zsh-users/zsh-completions --fpath src
 # Enables and configures smart and extensive tab completion.
 # completion must be sourced after all modules that add completion definitions.
 zmodule completion
+# Scoop completion
+zmodule $HOME/scoop/apps/chezmoi/current/completions --source chezmoi.zsh
+# OMZ completion
+zmodule ohmyzsh/ohmyzsh --root plugins/zoxide
+zmodule ohmyzsh/ohmyzsh --root plugins/docker --fpath "$ZSH_CACHE_DIR/completions"
 
 #
 # Modules that must be initialized last

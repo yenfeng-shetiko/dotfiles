@@ -47,7 +47,6 @@ alias mv='advmv -g'
 alias cp='advcp -g'
 {{ end }}
 {{ if eq .chezmoi.os "windows"}}
-fpath=($HOME/scoop/apps/zoxide/current/completions $HOME/scoop/apps/chezmoi/current/completions $fpath)
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 export EDITOR='emacs -nw'
 source ~/src/git-subrepo/.rc
