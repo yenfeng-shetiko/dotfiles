@@ -49,7 +49,6 @@ alias cp='advcp -g'
 {{ if eq .chezmoi.os "windows"}}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 export EDITOR='emacs -nw'
-source ~/src/git-subrepo/.rc
 alias pacman=pacboy
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
