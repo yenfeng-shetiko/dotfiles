@@ -36,8 +36,6 @@ bindkey -e
 
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
-# Set ZSH_CACHE_DIR
-ZSH_CACHE_DIR="$HOME/.cache/omz"
 
 # -----------------
 # Zim configuration
@@ -97,6 +95,16 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md#how-to-tweak-it
 #typeset -A ZSH_HIGHLIGHT_STYLES
 #ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
+
+#
+# OMZ
+#
+
+# Set ZSH_CACHE_DIR
+ZSH_CACHE_DIR="$HOME/.cache/omz"
+# Create cache and completions dir and add to $fpath
+mkdir -p "$ZSH_CACHE_DIR/completions"
+(( ${fpath[(Ie)"$ZSH_CACHE_DIR/completions"]} )) || fpath=("$ZSH_CACHE_DIR/completions" $fpath)
 
 # ------------------
 # Initialize modules
