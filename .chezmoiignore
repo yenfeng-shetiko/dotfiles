@@ -11,8 +11,6 @@ AppData
 .zimrc
 {{ else }}
 .zshenv
-.env.zsh
-.p10k.zsh
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
 {{ else }}
