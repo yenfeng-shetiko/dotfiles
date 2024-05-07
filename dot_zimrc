@@ -40,11 +40,10 @@ zmodule zsh-users/zsh-completions --fpath src
 # Enables and configures smart and extensive tab completion.
 # completion must be sourced after all modules that add completion definitions.
 zmodule completion
+# Provides archive, unarchive and lsarchive functions for easy archive manipulation based on file extensions.
+zmodule archive
 # Scoop completion
 zmodule $HOME/scoop/apps/chezmoi/current/completions --source chezmoi.zsh
-# OMZ completion
-zmodule ohmyzsh/ohmyzsh --root plugins/zoxide
-zmodule ohmyzsh/ohmyzsh --root plugins/docker
 
 #
 # Modules that must be initialized last
@@ -58,4 +57,13 @@ zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 # Fish-like autosuggestions for Zsh.
 zmodule zsh-users/zsh-autosuggestions
-
+# OMZ
+zmodule ohmyzsh/ohmyzsh --root plugins/cp
+zmodule ohmyzsh/ohmyzsh --root plugins/fancy-ctrl-z
+zmodule ohmyzsh/ohmyzsh --root plugins/gitignore
+zmodule ohmyzsh/ohmyzsh --root plugins/zoxide
+zmodule ohmyzsh/ohmyzsh --root plugins/docker
+# Replace zsh's default completion selection menu with fzf
+zmodule Aloxaf/fzf-tab
+# Git subrepo
+zmodule ingydotnet/git-subrepo --source .rc
