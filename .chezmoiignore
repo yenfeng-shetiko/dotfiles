@@ -7,10 +7,9 @@ README.md
 .gnupg
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
-.bashrc
 AppData
+.zimrc
 {{ else }}
-.zshrc
 .zshenv
 .env.zsh
 .p10k.zsh
