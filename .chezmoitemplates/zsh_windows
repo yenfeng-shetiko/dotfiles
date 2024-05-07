@@ -123,6 +123,12 @@ source ${ZIM_HOME}/init.zsh
 # ------------------------------
 
 #
+# source env
+#
+
+source ~/.env.zsh
+
+#
 # zsh-history-substring-search
 #
 
