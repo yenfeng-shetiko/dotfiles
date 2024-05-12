@@ -73,6 +73,7 @@ z4h source ~/.env.zsh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #
+mkdir -p "$ZSH_CACHE_DIR/completions"
 z4h load ohmyzsh/ohmyzsh/plugins/cp
 z4h load ohmyzsh/ohmyzsh/plugins/fancy-ctrl-z
 z4h load ohmyzsh/ohmyzsh/plugins/gitignore
