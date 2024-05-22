@@ -1,10 +1,9 @@
 [Unit]
 Description=Rclone mount %I driectory
-BindsTo=sway-session.target
 
 [Service]
 Type=simple
 ExecStart=/usr/bin/rclone mount dropbox:/%I/  {{ .chezmoi.homeDir }}/%I --cache-dir {{ .chezmoi.homeDir }}/.cache/rclone --vfs-cache-mode writes
 
 [Install]
-WantedBy=sway-session.target
+WantedBy=default.target
