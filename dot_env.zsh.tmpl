@@ -49,8 +49,9 @@ alias cp='advcp -g'
 {{ if eq .chezmoi.os "windows"}}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
 export EDITOR='emacs -nw'
+gsudo() { WSLENV=WSL_DISTRO_NAME:USER:$WSLENV MSYS_NO_PATHCONV=1 gsudo.exe "$@"; }
+alias sudo=gsudo
 alias pacman=pacboy
-sudo() { WSLENV=WSL_DISTRO_NAME:USER:$WSLENV MSYS_NO_PATHCONV=1 gsudo.exe "$@"; }
 {{ end }}
 {{ if eq .chezmoi.os "android"}}
 eval "$(register-python-argcomplete --shell zsh pipx)"
