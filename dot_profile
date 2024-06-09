@@ -18,9 +18,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
-# Hardware video acceleration
-#export LIBVA_DRIVER_NAME=nvidia
-#export VDPAU_DRIVER=nvidia
 # Default
 export TERMINAL=foot
 export EDITOR='emacs -nw'
