@@ -1,7 +1,6 @@
 {{ if eq .chezmoi.os "windows" }}
 @echo off
 setx HOME %USERPROFILE%
-setx MSYS2_PATH_TYPE inherit
 setx MSYS winsymlinks:nativestrict
 exit /b 0
 {{ end }}
